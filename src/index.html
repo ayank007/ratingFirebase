@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            border: 1px solid;
+            height: 50px;
+            width: 200px;
+            border-radius: 5px;
+        }
+        /* customer */
+        .customer input{
+            padding: 5px 15px !important;
+            width: 300px;
+        }
+        .submit[type=submit]{
+            padding: 5px 15px !important;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            height: 50px;
+            padding: 5px 20px;
+        }
+        li{
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        /* manager */
+        .manager input{
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="flex h-screen">
+    <div class="customer w-1/2 flex items-center justify-center">
+        <div class="flex gap-x-2">
+            <div class="bg-black text-white py-2 px-6 rounded-md signinBtn">Sign in with Google</div>
+            <div class="bg-black text-white py-2 px-6 rounded-md signiotuBtn">Sign out with Google</div>
+        </div>
+        <form name="myForm" class="flex flex-col gap-y-4">
+            <h1 class="pb-10 text-4xl font-bold">Customer</h1>
+            <input type="text" name="jobId" placeholder="Job Id" required>
+            <input type="number" name="rating" placeholder="rating" required>
+            <button type="submit" class="submit">Submit</button>
+        </form>
+    </div>
+    <div class="manager results bg-black text-white w-1/2 h-full flex items-center flex-col justify-center">
+        <h1 class="pb-10 text-4xl font-bold">Manager</h1>
+        <ul>
+            <li class="fiveStar">5 : <input type="range" value="0" step="1" min="0" max="100" readonly> : <span>0</span></li>
+            <li class="fourStar">4 : <input type="range" value="0" step="1" min="0" max="100" readonly> : <span>0</span></li>
+            <li class="threeStar">3 : <input type="range" value="0" step="1" min="0" max="100" readonly> : <span>0</span></li>
+            <li class="twoStar">2 : <input type="range" value="0" step="1" min="0" max="100" readonly> : <span>0</span></li>
+            <li class="oneStar">1 : <input type="range" value="0" step="1" min="0" max="100" readonly> : <span>0</span></li>
+        </ul>
+    </div>
+
+    
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+<script defer type="module" src="index.js"></script>
+</body>
+</html>
